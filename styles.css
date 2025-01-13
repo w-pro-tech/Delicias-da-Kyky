@@ -1,72 +1,318 @@
-/* Resetando estilos padrões */
+/* Reset de margens e padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo global do site */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fcfcfc;
-    color: #591902;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F9F7F3; /* Fundo em tom pastel claro */
+    color: #333; /* Cor de texto escuro */
+    line-height: 1.6;
 }
 
-header {
-    background-color: #84D9D0;
-    padding: 20px;
-    text-align: center;
+/* Container principal para centralizar conteúdo */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-header h1 {
-    font-size: 2.5em;
-    color: #591902;
+/* Estilo da Navbar */
+.navbar {
+    background-color: #F1D0A1; /* Cor pastel de fundo */
+    padding: 20px 0;
+    margin-bottom: 40px; /* Aumento do espaço entre a navegação e as outras seções */
 }
 
-nav ul {
-    list-style-type: none;
+.navbar .logo img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Espaçamento à direita */
+    gap: 30px; /* Aumento do espaço entre os itens de navegação */
 }
 
-nav ul li a {
+.navbar .nav-links a {
+    color: #3CBBB1; /* Cor de link em tom pastel */
     text-decoration: none;
-    color: #591902;
-    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
 }
 
-h2 {
-    text-align: center;
-    margin-top: 30px;
-    color: #591902;
+.navbar .nav-links a:hover {
+    color: #EE7674; /* Cor de destaque ao passar o mouse */
 }
 
-.produto {
-    background-color: #F277B0;
-    margin: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    display: inline-block;
-    width: 45%;
+/* Hero Section (Imagem à esquerda e texto à direita) */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%; /* Padding lateral */
+    height: 80vh;  /* Ajuste da altura para 80% da altura da tela */
 }
 
-.produto img {
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #EE7674;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.hero-text .btn {
+    background-color: #FFB6A2; /* Cor pastel do botão */
+    padding: 12px 30px;
+    color: #fff;
+    font-size: 1.1em;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.hero-text .btn:hover {
+    background-color: #EE7674; /* Hover do botão */
+}
+
+.hero-image {
+    width: 400px; /* Redução da largura da imagem */
+    height: auto;  /* A imagem ocupa 100% da altura do Hero */
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image img {
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover; /* A imagem cobre toda a área sem distorcer */
+    object-position: center; /* Garantir que a imagem esteja centralizada */
+    border-radius: 30px;
 }
-
-.produto h3 {
-    font-size: 1.5em;
-    color: #591902;
-}
-
-footer {
-    background-color: #591902;
-    color: white;
+/* Seção de Serviços (Grid 2x2) */
+/* Seção de Serviços (Grid 2x2) */
+/* Seção de Serviços (Grid 2x2) */
+.services-section {
+    padding: 60px 0;
+    background-color: #F6E6D7; /* Cor pastel suave */
     text-align: center;
-    padding: 10px 0;
-    margin-top: 30px;
+    margin-bottom: 60px; /* Aumento do espaço entre as seções */
+}
+
+.services-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #5E503F;
+}
+
+/* Ajuste da grid para garantir que as colunas fiquem corretas */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 40px; /* Espaçamento entre as colunas */
+    justify-items: center; /* Alinha os itens ao centro dentro da grid */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    max-width: 1200px; /* Define uma largura máxima para garantir a centralização */
+    margin: 0 auto; /* Centraliza a grid */
+}
+
+.service-card {
+    position: relative;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 100%; /* Garante que a largura das cards seja 100% do espaço disponível */
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1.1em;
+}
+
+
+/* Seção Galeria */
+/* Seção de Galeria */
+.gallery-section {
+    padding: 60px 0;
+    background-color: #F9F7F3;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #5E503F;
+}
+
+/* Estilo do carrossel */
+.carousel {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens no carrossel */
+    gap: 20px; /* Espaço entre as imagens */
+    overflow-x: auto; /* Permite rolar horizontalmente */
+    scroll-snap-type: x mandatory; /* Permite um "snap" ao rolar */
+    -webkit-overflow-scrolling: touch; /* Melhor performance no mobile */
+}
+
+.carousel img {
+    width: 45%; /* Cada imagem ocupa 45% da largura do carrossel */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    scroll-snap-align: center; /* As imagens "encaixam" no centro ao rolar */
+}
+
+/* Responsividade para exibir 2 imagens no carrossel */
+@media (max-width: 768px) {
+    .carousel img {
+        width: 48%; /* Ajusta o tamanho das imagens em telas menores */
+    }
+}
+
+
+/* Footer */
+/* Footer */
+footer {
+    padding: 50px 0;
+    background-color: #F1D0A1;
+    text-align: left; /* Alinha o conteúdo à esquerda */
+}
+
+footer h3 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #5E503F;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between; /* Alinha as informações de contato à esquerda e redes sociais à direita */
+    align-items: flex-start;
+    max-width: 1200px; /* Limita a largura do footer */
+    margin: 0 auto; /* Centraliza o footer */
+    padding: 0 5%;
+}
+
+footer .contact-info {
+    width: 60%; /* Garantir que a seção de contato ocupe a maior parte */
+}
+
+footer .contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+footer .contact-info a {
+    color: #5E503F;
+    text-decoration: none;
+}
+
+footer .contact-info a:hover {
+    color: #EE7674; /* Alterando a cor ao passar o mouse */
+}
+
+footer .social-links {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os ícones */
+    justify-content: flex-end; /* Alinha os ícones à direita */
+}
+
+footer .social-links a {
+    color: #5E503F;
+    font-size: 1.8em;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    color: #EE7674; /* Cor ao passar o mouse */
+}
+
+footer .social-links a i {
+    transition: color 0.3s;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    footer .contact-info {
+        width: 100%; /* Ocupa toda a largura em telas menores */
+        margin-bottom: 30px;
+    }
+
+    footer .social-links {
+        justify-content: flex-start; /* Alinha as redes sociais à esquerda em telas menores */
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* 1 coluna em dispositivos móveis */
+    }
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .carousel img {
+        max-width: 100%;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
