@@ -1,4 +1,8 @@
 /* Reset de margens e padding */
+
+:root{
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -24,13 +28,13 @@ body {
 
 /* Estilo da Navbar */
 .navbar {
-    background-color: #F1D0A1; /* Cor pastel de fundo */
+    background-color: #f277b0; /* Cor pastel de fundo */
     padding: 20px 0;
     margin-bottom: 40px; /* Aumento do espaço entre a navegação e as outras seções */
 }
 
 .navbar .logo img {
-    width: 120px;
+    width: 60px;
     height: auto;
     border-radius: 50%;
 }
@@ -43,14 +47,15 @@ body {
 }
 
 .navbar .nav-links a {
-    color: #3CBBB1; /* Cor de link em tom pastel */
+    color: #591902; /* Cor de link em tom pastel */
     text-decoration: none;
     font-size: 1.1em;
     text-transform: uppercase;
 }
 
 .navbar .nav-links a:hover {
-    color: #EE7674; /* Cor de destaque ao passar o mouse */
+    font-style: bold;
+    text-shadow: 0 0px 1px #591902;
 }
 
 /* Hero Section (Imagem à esquerda e texto à direita) */
@@ -59,7 +64,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%; /* Padding lateral */
-    height: 80vh;  /* Ajuste da altura para 80% da altura da tela */
+    height: 85vh;  /* Ajuste da altura para 80% da altura da tela */
 }
 
 .hero-text {
@@ -69,7 +74,7 @@ body {
 .hero-text h1 {
     font-size: 2.5em;
     font-weight: 700;
-    color: #EE7674;
+    color: #591902;
     margin-bottom: 15px;
 }
 
@@ -80,7 +85,7 @@ body {
 }
 
 .hero-text .btn {
-    background-color: #FFB6A2; /* Cor pastel do botão */
+    background-color: #f277b0; /* Cor pastel do botão */
     padding: 12px 30px;
     color: #fff;
     font-size: 1.1em;
@@ -94,7 +99,7 @@ body {
 }
 
 .hero-image {
-    width: 400px; /* Redução da largura da imagem */
+    width: 300px; /* Redução da largura da imagem */
     height: auto;  /* A imagem ocupa 100% da altura do Hero */
     overflow: hidden;
     position: relative;
@@ -108,30 +113,31 @@ body {
     border-radius: 30px;
 }
 /* Seção de Serviços (Grid 2x2) */
-/* Seção de Serviços (Grid 2x2) */
-/* Seção de Serviços (Grid 2x2) */
 .services-section {
-    padding: 60px 0;
-    background-color: #F6E6D7; /* Cor pastel suave */
+    padding: 10px 0;
+    background-color:  #84d9d0; /* Cor pastel suave */
     text-align: center;
-    margin-bottom: 60px; /* Aumento do espaço entre as seções */
+    margin-bottom: 30px; /* Aumento do espaço entre as seções */
+    height: 100vh;
 }
 
 .services-section h2 {
     font-size: 2.2em;
     margin-bottom: 30px;
+    margin-top: 30px;
     color: #5E503F;
 }
 
 /* Ajuste da grid para garantir que as colunas fiquem corretas */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-    gap: 40px; /* Espaçamento entre as colunas */
+    grid-template-columns: repeat(3, 1fr); /* 2 colunas */
+    gap: 30px; /* Espaçamento entre as colunas */
     justify-items: center; /* Alinha os itens ao centro dentro da grid */
     align-items: center; /* Alinha os itens verticalmente ao centro */
     max-width: 1200px; /* Define uma largura máxima para garantir a centralização */
     margin: 0 auto; /* Centraliza a grid */
+    margin-bottom: 40px;
 }
 
 .service-card {
@@ -139,7 +145,7 @@ body {
     background-color: #fff;
     background-size: cover;
     background-position: center;
-    height: 250px;
+    height: 225px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -179,6 +185,8 @@ body {
 
 /* Estilo do carrossel */
 .carousel {
+    margin: 0 auto;
+    max-width: 800px;
     display: flex;
     justify-content: center; /* Centraliza as imagens no carrossel */
     gap: 20px; /* Espaço entre as imagens */
@@ -188,7 +196,7 @@ body {
 }
 
 .carousel img {
-    width: 45%; /* Cada imagem ocupa 45% da largura do carrossel */
+    width: 30%; /* Cada imagem ocupa 45% da largura do carrossel */
     height: auto;
     object-fit: cover;
     border-radius: 10px;
