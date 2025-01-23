@@ -28,9 +28,8 @@ body {
 
 /* Estilo da Navbar */
 .navbar {
-    background-color: #f277b0; /* Cor pastel de fundo */
-    padding: 20px 0;
-    margin-bottom: 40px; /* Aumento do espaço entre a navegação e as outras seções */
+    background-image: linear-gradient(to right, #84d9d0, #f277b0); /* Gradiente do verde para o rosa */
+    padding: 20px 0;/* Aumento do espaço entre a navegação e as outras seções */
 }
 
 .navbar .logo img {
@@ -58,37 +57,80 @@ body {
     text-shadow: 0 0px 1px #591902;
 }
 
+/* Estilos personalizados para o botão */
+.nav-links .btn {
+    background-color: #84d9d0; /* Cor de fundo personalizada */
+    color: white; /* Cor do texto */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links .btn:hover {
+    background-color: #EE7674; /* Cor ao passar o mouse */
+}
+
+
 /* Hero Section (Imagem à esquerda e texto à direita) */
 .hero {
+    position: relative;
+    background-image: url('/images/xdoces.jpeg');
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-position: center; /* Garante que a imagem fique centralizada */
+    height: 90vh;  /* Ajuste da altura para 85% da altura da tela */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Centraliza a overlay horizontalmente */
+    align-items: center; /* Centraliza a overlay verticalmente */
     padding: 0 5%; /* Padding lateral */
-    height: 85vh;  /* Ajuste da altura para 80% da altura da tela */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
+    z-index: 1; /* Coloca o overlay acima da imagem */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Centraliza o conteúdo */
+    width: 100%;
+    height: 100%;
 }
 
 .hero-text {
-    width: 50%;
+    position: relative;
+    text-align: center; /* Centraliza o texto */
+    color: #84d9d0; /* Cor do texto */
+    max-width: 80%; /* Ajusta a largura máxima para o texto não ficar muito grande */
 }
 
 .hero-text h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: 700;
-    color: #591902;
     margin-bottom: 15px;
+    background-image: linear-gradient(to bottom, #EE7674, #84d9d0); /* Gradiente de top para bottom */
+    -webkit-background-clip: text; /* Faz com que o gradiente se aplique ao texto */
+    color: transparent; /* Faz o texto transparente para que o gradiente apareça */
 }
 
 .hero-text p {
     font-size: 1.2em;
-    color: #555;
+    font-weight: 500;
     margin-bottom: 30px;
+    color: #fff;
+    width: 800px;
 }
 
 .hero-text .btn {
-    background-color: #f277b0; /* Cor pastel do botão */
+    background-color: #84d9d0; /* Cor pastel do botão */
     padding: 12px 30px;
-    color: #fff;
+    color: #591902;
     font-size: 1.1em;
+    font-weight: bold;
     border-radius: 5px;
     text-transform: uppercase;
     text-decoration: none;
@@ -97,6 +139,7 @@ body {
 .hero-text .btn:hover {
     background-color: #EE7674; /* Hover do botão */
 }
+
 
 .hero-image {
     width: 300px; /* Redução da largura da imagem */
@@ -115,11 +158,13 @@ body {
 /* Seção de Serviços (Grid 2x2) */
 .services-section {
     padding: 10px 0;
-    background-color:  #84d9d0; /* Cor pastel suave */
+    background-image: linear-gradient(to right, #84d9d0, #f277b0); /* Gradiente do verde para o rosa */    
     text-align: center;
     margin-bottom: 30px; /* Aumento do espaço entre as seções */
-    height: 100vh;
+    height: 50vh;
 }
+
+
 
 .services-section h2 {
     font-size: 2.2em;
@@ -131,7 +176,7 @@ body {
 /* Ajuste da grid para garantir que as colunas fiquem corretas */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 2 colunas */
+    grid-template-columns: 1fr 1fr 1fr; /* 2 colunas */
     gap: 30px; /* Espaçamento entre as colunas */
     justify-items: center; /* Alinha os itens ao centro dentro da grid */
     align-items: center; /* Alinha os itens verticalmente ao centro */
@@ -142,18 +187,19 @@ body {
 
 .service-card {
     position: relative;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semitransparente */
     background-size: cover;
     background-position: center;
-    height: 225px;
+    min-height: 150px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    width: 100%; /* Garante que a largura das cards seja 100% do espaço disponível */
+    flex-direction: column; /* Organiza os itens verticalmente */
+    justify-content: space-between; /* Coloca espaço entre o título e o parágrafo */
+    color: #333; /* Cor do texto escuro */
+    width: 100%;
+    text-align: center; /* Alinha o texto no centro */
 }
 
 .service-card h3 {
@@ -164,13 +210,12 @@ body {
 
 .service-card p {
     font-size: 1.1em;
+    margin-top: auto; /* Garante que o parágrafo fique na parte inferior */
 }
 
-
-/* Seção Galeria */
-/* Seção de Galeria */
+/* Estilo da galeria */
 .gallery-section {
-    padding: 60px 0;
+    padding: 30px 0;
     background-color: #F9F7F3;
     margin-bottom: 60px;
     text-align: center;
@@ -178,30 +223,33 @@ body {
 
 .gallery-section h2 {
     font-size: 2.5em;
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 10px;
     color: #5E503F;
 }
 
-/* Estilo do carrossel */
-.carousel {
-    margin: 0 auto;
-    max-width: 800px;
-    display: flex;
-    justify-content: center; /* Centraliza as imagens no carrossel */
-    gap: 20px; /* Espaço entre as imagens */
-    overflow-x: auto; /* Permite rolar horizontalmente */
-    scroll-snap-type: x mandatory; /* Permite um "snap" ao rolar */
-    -webkit-overflow-scrolling: touch; /* Melhor performance no mobile */
+/* Layout de grade (grid) */
+/* Layout de grade (grid) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas no topo */
+    grid-template-rows: repeat(2, 1fr); /* 2 linhas no fundo */
+    gap: 40px; /* Espaço entre as imagens */
+    max-width: 100%;
+    justify-items: center; /* Centraliza as imagens horizontalmente dentro das células */
+    align-items: center; /* Centraliza as imagens verticalmente dentro das células */
+    margin: 0 auto; /* Centraliza o grid em relação à página */
 }
 
-.carousel img {
-    width: 30%; /* Cada imagem ocupa 45% da largura do carrossel */
-    height: auto;
-    object-fit: cover;
+/* Estilo das imagens da galeria */
+.gallery-grid img {
+    width: 100%;
+    height: 300px; /* Ajuste a altura conforme necessário */
+    width: 250px;
+    object-fit: cover; /* Garante que a imagem preencha a área sem distorção */
     border-radius: 10px;
-    scroll-snap-align: center; /* As imagens "encaixam" no centro ao rolar */
 }
+
+
 
 /* Responsividade para exibir 2 imagens no carrossel */
 @media (max-width: 768px) {
@@ -215,7 +263,7 @@ body {
 /* Footer */
 footer {
     padding: 50px 0;
-    background-color: #F1D0A1;
+    background-image: linear-gradient(to right, #84d9d0, #f277b0); /* Gradiente do verde para o rosa */    
     text-align: left; /* Alinha o conteúdo à esquerda */
 }
 
@@ -228,7 +276,7 @@ footer h3 {
 footer .footer-container {
     display: flex;
     justify-content: space-between; /* Alinha as informações de contato à esquerda e redes sociais à direita */
-    align-items: flex-start;
+    align-items: flex-center;
     max-width: 1200px; /* Limita a largura do footer */
     margin: 0 auto; /* Centraliza o footer */
     padding: 0 5%;
@@ -249,7 +297,7 @@ footer .contact-info a {
 }
 
 footer .contact-info a:hover {
-    color: #EE7674; /* Alterando a cor ao passar o mouse */
+    color: #84d9d0; /* Alterando a cor ao passar o mouse */
 }
 
 footer .social-links {
@@ -266,7 +314,7 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-    color: #EE7674; /* Cor ao passar o mouse */
+    color: #84d9d0; /* Cor ao passar o mouse */
 }
 
 footer .social-links a i {
