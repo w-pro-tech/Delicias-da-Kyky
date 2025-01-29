@@ -54,3 +54,12 @@ orderBtns.forEach(btn => {
         }
     });
 });
+
+
+// JavaScript para ativar e desativar o menu de navegação
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.navbar .nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');  // Alterna a classe 'active' no menu
+});
