@@ -1,8 +1,4 @@
 /* Reset de margens e padding */
-
-:root{
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -15,21 +11,22 @@ body {
     background-color: #F9F7F3; /* Fundo em tom pastel claro */
     color: #333; /* Cor de texto escuro */
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-/* Container principal para centralizar conteúdo */
+/* Container principal */
 .container {
     width: 90%;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-/* Estilo da Navbar */
+/* Navbar */
 .navbar {
     background-image: linear-gradient(to right, #84d9d0, #f277b0); /* Gradiente do verde para o rosa */
-    padding: 20px 0;/* Aumento do espaço entre a navegação e as outras seções */
+    padding: 20px 0;
 }
 
 .navbar .logo img {
@@ -41,49 +38,45 @@ body {
 .navbar .nav-links {
     list-style: none;
     display: flex;
-    justify-content: flex-end; /* Espaçamento à direita */
-    gap: 30px; /* Aumento do espaço entre os itens de navegação */
+    justify-content: flex-end;
+    gap: 30px;
 }
 
 .navbar .nav-links a {
-    color: #591902; /* Cor de link em tom pastel */
+    color: #591902;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 0.8em;
     text-transform: uppercase;
 }
 
 .navbar .nav-links a:hover {
-    font-style: bold;
+    font-weight: bold;
     text-shadow: 0 0px 1px #591902;
 }
 
-/* Estilos personalizados para o botão */
 .nav-links .btn {
-    background-color: #84d9d0; /* Cor de fundo personalizada */
-    color: white; /* Cor do texto */
+    background-color: #84d9d0;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .nav-links .btn:hover {
-    background-color: #EE7674; /* Cor ao passar o mouse */
+    background-color: #EE7674;
 }
 
-
-/* Hero Section (Imagem à esquerda e texto à direita) */
+/* Hero Section */
 .hero {
     position: relative;
-    background-image: url('/images/xdoces.jpeg');
-    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
-    background-position: center; /* Garante que a imagem fique centralizada */
-    height: 90vh;  /* Ajuste da altura para 85% da altura da tela */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('/images/xdoces.jpeg') no-repeat center center/cover;
+    height: 90vh;
     display: flex;
-    justify-content: center; /* Centraliza a overlay horizontalmente */
-    align-items: center; /* Centraliza a overlay verticalmente */
-    padding: 0 5%; /* Padding lateral */
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
 }
 
 .hero-overlay {
@@ -92,29 +85,29 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
-    z-index: 1; /* Coloca o overlay acima da imagem */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo */
-    align-items: center; /* Centraliza o conteúdo */
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
 }
 
 .hero-text {
     position: relative;
-    text-align: center; /* Centraliza o texto */
-    color: #84d9d0; /* Cor do texto */
-    max-width: 80%; /* Ajusta a largura máxima para o texto não ficar muito grande */
+    text-align: center;
+    color: #84d9d0;
+    max-width: 80%;
 }
 
 .hero-text h1 {
     font-size: 3em;
     font-weight: 700;
     margin-bottom: 15px;
-    background-image: linear-gradient(to bottom, #EE7674, #84d9d0); /* Gradiente de top para bottom */
-    -webkit-background-clip: text; /* Faz com que o gradiente se aplique ao texto */
-    color: transparent; /* Faz o texto transparente para que o gradiente apareça */
+    background-image: linear-gradient(to bottom, #EE7674, #84d9d0);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .hero-text p {
@@ -122,11 +115,10 @@ body {
     font-weight: 500;
     margin-bottom: 30px;
     color: #fff;
-    width: 800px;
 }
 
 .hero-text .btn {
-    background-color: #84d9d0; /* Cor pastel do botão */
+    background-color: #84d9d0;
     padding: 12px 30px;
     color: #591902;
     font-size: 1.1em;
@@ -137,13 +129,13 @@ body {
 }
 
 .hero-text .btn:hover {
-    background-color: #EE7674; /* Hover do botão */
+    background-color: #EE7674;
 }
 
-
+/* Hero Image */
 .hero-image {
-    width: 300px; /* Redução da largura da imagem */
-    height: auto;  /* A imagem ocupa 100% da altura do Hero */
+    width: 300px;
+    height: auto;
     overflow: hidden;
     position: relative;
 }
@@ -151,69 +143,58 @@ body {
 .hero-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* A imagem cobre toda a área sem distorcer */
-    object-position: center; /* Garantir que a imagem esteja centralizada */
+    object-fit: cover;
+    object-position: center;
     border-radius: 30px;
 }
-/* Seção de Serviços (Grid 2x2) */
+
+/* Seção de Serviços */
 .services-section {
-    padding: 10px 0;
-    background-image: linear-gradient(to right, #84d9d0, #f277b0); /* Gradiente do verde para o rosa */    
     text-align: center;
-    margin-bottom: 30px; /* Aumento do espaço entre as seções */
-    height: 50vh;
+    padding: 50px 20px;
 }
 
-
-
-.services-section h2 {
-    font-size: 2.2em;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    color: #5E503F;
-}
-
-/* Ajuste da grid para garantir que as colunas fiquem corretas */
 .services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* 2 colunas */
-    gap: 30px; /* Espaçamento entre as colunas */
-    justify-items: center; /* Alinha os itens ao centro dentro da grid */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    max-width: 1200px; /* Define uma largura máxima para garantir a centralização */
-    margin: 0 auto; /* Centraliza a grid */
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .service-card {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semitransparente */
-    background-size: cover;
-    background-position: center;
-    min-height: 150px;
+    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    display: flex;
-    flex-direction: column; /* Organiza os itens verticalmente */
-    justify-content: space-between; /* Coloca espaço entre o título e o parágrafo */
-    color: #333; /* Cor do texto escuro */
-    width: 100%;
-    text-align: center; /* Alinha o texto no centro */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
 }
 
 .service-card h3 {
-    font-size: 1.5em;
-    font-weight: bold;
     margin-bottom: 10px;
 }
 
-.service-card p {
-    font-size: 1.1em;
-    margin-top: auto; /* Garante que o parágrafo fique na parte inferior */
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
 }
 
-/* Estilo da galeria */
+.service-card li {
+    margin-bottom: 5px;
+}
+
+.price {
+    display: inline-block;
+    background: #f8a5c2;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Seção de Galeria */
 .gallery-section {
     padding: 30px 0;
     background-color: #F9F7F3;
@@ -227,44 +208,41 @@ body {
     color: #5E503F;
 }
 
-/* Layout de grade (grid) */
-/* Layout de grade (grid) */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas no topo */
-    grid-template-rows: repeat(2, 1fr); /* 2 linhas no fundo */
-    gap: 40px; /* Espaço entre as imagens */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
     max-width: 100%;
-    justify-items: center; /* Centraliza as imagens horizontalmente dentro das células */
-    align-items: center; /* Centraliza as imagens verticalmente dentro das células */
-    margin: 0 auto; /* Centraliza o grid em relação à página */
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
-/* Estilo das imagens da galeria */
 .gallery-grid img {
-    width: 100%;
-    height: 300px; /* Ajuste a altura conforme necessário */
-    width: 250px;
-    object-fit: cover; /* Garante que a imagem preencha a área sem distorção */
+    width: 220px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
-
-
-/* Responsividade para exibir 2 imagens no carrossel */
-@media (max-width: 768px) {
-    .carousel img {
-        width: 48%; /* Ajusta o tamanho das imagens em telas menores */
-    }
+/* Botão de Scroll to Top */
+.scroll-to-top {
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
 
+.scroll-to-top:hover {
+    background-color: #EE7674;
+    transform: scale(1.1);
+}
 
-/* Footer */
 /* Footer */
 footer {
     padding: 50px 0;
-    background-image: linear-gradient(to right, #84d9d0, #f277b0); /* Gradiente do verde para o rosa */    
-    text-align: left; /* Alinha o conteúdo à esquerda */
+    background-image: linear-gradient(to right, #84d9d0, #f277b0);
+    text-align: left;
 }
 
 footer h3 {
@@ -275,15 +253,15 @@ footer h3 {
 
 footer .footer-container {
     display: flex;
-    justify-content: space-between; /* Alinha as informações de contato à esquerda e redes sociais à direita */
+    justify-content: space-between;
     align-items: flex-center;
-    max-width: 1200px; /* Limita a largura do footer */
-    margin: 0 auto; /* Centraliza o footer */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 5%;
 }
 
 footer .contact-info {
-    width: 60%; /* Garantir que a seção de contato ocupe a maior parte */
+    width: 60%;
 }
 
 footer .contact-info p {
@@ -297,14 +275,14 @@ footer .contact-info a {
 }
 
 footer .contact-info a:hover {
-    color: #84d9d0; /* Alterando a cor ao passar o mouse */
+    color: #84d9d0;
 }
 
 footer .social-links {
     display: flex;
     align-items: center;
-    gap: 20px; /* Espaçamento entre os ícones */
-    justify-content: flex-end; /* Alinha os ícones à direita */
+    gap: 20px;
+    justify-content: flex-end;
 }
 
 footer .social-links a {
@@ -314,29 +292,7 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-    color: #84d9d0; /* Cor ao passar o mouse */
-}
-
-footer .social-links a i {
-    transition: color 0.3s;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    footer .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    footer .contact-info {
-        width: 100%; /* Ocupa toda a largura em telas menores */
-        margin-bottom: 30px;
-    }
-
-    footer .social-links {
-        justify-content: flex-start; /* Alinha as redes sociais à esquerda em telas menores */
-    }
+    color: #84d9d0;
 }
 
 /* Responsividade */
@@ -356,19 +312,26 @@ footer .social-links a i {
     }
 
     .services-grid {
-        grid-template-columns: 1fr; /* 1 coluna em dispositivos móveis */
-    }
-
-    .carousel {
-        flex-direction: column;
-    }
-
-    .carousel img {
-        max-width: 100%;
+        grid-template-columns: 1fr;
     }
 
     .navbar .nav-links {
         flex-direction: column;
         gap: 20px;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    footer .contact-info {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    footer .social-links {
+        justify-content: flex-start;
     }
 }
