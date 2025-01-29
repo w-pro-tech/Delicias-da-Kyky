@@ -25,7 +25,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-image: linear-gradient(to right, #84d9d0, #f277b0); /* Gradiente do verde para o rosa */
+    background-image: linear-gradient(to right, #EE7674, #f277b0); /* Gradiente do verde para o rosa */
     padding: 20px 0;
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 .navbar .nav-links a {
-    color: #591902;
+    color: white;
     text-decoration: none;
     font-size: 0.8em;
     text-transform: uppercase;
@@ -51,12 +51,10 @@ body {
 
 .navbar .nav-links a:hover {
     font-weight: bold;
-    text-shadow: 0 0px 1px #591902;
 }
 
 .nav-links .btn {
     background-color: #84d9d0;
-    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -64,7 +62,12 @@ body {
     text-decoration: none;
 }
 
-.nav-links .btn:hover {
+.btn{
+    color: #591902 !important;
+
+}
+
+.btn:hover {
     background-color: #EE7674;
 }
 
@@ -105,16 +108,17 @@ body {
     font-size: 3em;
     font-weight: 700;
     margin-bottom: 15px;
-    background-image: linear-gradient(to bottom, #EE7674, #84d9d0);
+    background-image: linear-gradient(to bottom, #EE7674, #f277b0);
     -webkit-background-clip: text;
     color: transparent;
 }
 
 .hero-text p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 500;
     margin-bottom: 30px;
     color: #fff;
+    width: 800px;
 }
 
 .hero-text .btn {
@@ -130,6 +134,7 @@ body {
 
 .hero-text .btn:hover {
     background-color: #EE7674;
+    color: #fff;
 }
 
 /* Hero Image */
@@ -154,6 +159,10 @@ body {
     padding: 50px 20px;
 }
 
+.services-section h2{
+    margin-bottom: 30px;
+}
+
 .services-grid {
     display: flex;
     justify-content: center;
@@ -171,7 +180,7 @@ body {
 }
 
 .service-card h3 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .service-card ul {
@@ -192,6 +201,49 @@ body {
     border-radius: 25px;
     font-weight: bold;
     font-size: 18px;
+}
+
+
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilos da Seção de Vídeo */
+.video-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.video-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.video-container video {
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Seção de Galeria */
@@ -241,14 +293,14 @@ body {
 /* Footer */
 footer {
     padding: 50px 0;
-    background-image: linear-gradient(to right, #84d9d0, #f277b0);
+    background-image: linear-gradient(to right, #EE7674, #f277b0); /* Gradiente do verde para o rosa */
     text-align: left;
 }
 
 footer h3 {
     font-size: 2.2em;
     margin-bottom: 20px;
-    color: #5E503F;
+    color: #84d9d0;
 }
 
 footer .footer-container {
@@ -270,12 +322,12 @@ footer .contact-info p {
 }
 
 footer .contact-info a {
-    color: #5E503F;
+    color: #84d9d0;
     text-decoration: none;
 }
 
 footer .contact-info a:hover {
-    color: #84d9d0;
+    color: #00ffe5;
 }
 
 footer .social-links {
@@ -286,13 +338,13 @@ footer .social-links {
 }
 
 footer .social-links a {
-    color: #5E503F;
+    color: #84d9d0;
     font-size: 1.8em;
     text-decoration: none;
 }
 
 footer .social-links a:hover {
-    color: #84d9d0;
+    color: #00ffe5;
 }
 
 /* Responsividade */
