@@ -63,6 +63,70 @@ body {
     text-decoration: none;
 }
 
+
+/* Exibe o botão do menu hambúrguer somente em telas pequenas */
+.navbar .menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Dentro da media query */
+.navbar .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    background-color: #EE7674;
+    position: absolute;
+    top: 60px; /* Ajuste a distância conforme necessário */
+    left: 0;
+    padding: 20px 0;
+    z-index: 1; /* Para garantir que o menu fique sobre outros conteúdos */
+    box-sizing: border-box;
+}
+
+/* Quando o menu está ativo */
+.navbar .nav-links.active {
+    display: flex;
+    height: auto; /* Certificando-se que a altura do menu é ajustada conforme o conteúdo */
+}
+
+    .navbar .nav-links a {
+        font-size: 1.1em;
+        color: white;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        color: white;
+        font-size: 2em;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .btn {
     color: #591902 !important;
 }
@@ -302,8 +366,9 @@ footer .footer-bottom {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    footer .footer-container {
+    .navbar .nav-links {
         flex-direction: column;
+        align-items: center;
     }
 
     .hero-text p {
@@ -314,11 +379,42 @@ footer .footer-bottom {
     .price {
         font-size: 1.5em; /* Tamanho de texto maior em telas menores */
     }
+
+    .hero-text h1 {
+        font-size: 2.5em; /* Ajusta o tamanho da fonte */
+    }
+
+    .video-container video {
+        width: 100%; /* Ajusta o tamanho do vídeo */
+        max-width: 100%;
+    }
+
+    .services-section {
+        padding: 20px 10px;
+    }
+
+    .carousel {
+        width: 100%; /* Faz o carrossel ocupar toda a largura em telas pequenas */
+    }
+
+    .carousel-images img {
+        width: 100%;
+    }
 }
 
-/* Seção de Galeria */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2em; /* Tamanho de texto ainda menor para telas pequenas */
+    }
+
+    .hero-text p {
+        font-size: 1.1em;
+    }
+}
+
 .gallery-section {
     text-align: center;
+    margin: 0 auto;
 }
 
 .gallery-section h2 {
@@ -330,8 +426,9 @@ footer .footer-bottom {
     display: flex;
     overflow: hidden;
     position: relative;
-    width: 40%; /* Largura do carrossel */
-    margin: 0 auto; /* Centraliza o carrossel na página */
+    width: 80%; /* Ajusta a largura do carrossel */
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto;
 }
 
 .carousel-images {
@@ -363,4 +460,15 @@ footer .footer-bottom {
 
 .next {
     right: 10px;
+}
+
+/* Responsividade para Galeria */
+@media (max-width: 768px) {
+    .carousel {
+        width: 90%; /* Ajusta a largura em telas pequenas */
+    }
+
+    .carousel-images img {
+        height: 250px; /* Ajusta a altura das imagens */
+    }
 }

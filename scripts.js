@@ -55,11 +55,19 @@ orderBtns.forEach(btn => {
     });
 });
 
+// Seleciona o botão do menu hambúrguer e a lista de links
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-// JavaScript para ativar e desativar o menu de navegação
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.navbar .nav-links');
+// Adiciona um evento de clique no botão de menu hambúrguer
+menuToggle.addEventListener('click', () => {
+    // Alterna a classe 'active' para mostrar ou ocultar o menu
+    navLinks.classList.toggle('active');
+});
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');  // Alterna a classe 'active' no menu
+// Adiciona um evento de clique ao documento para fechar o menu se o usuário clicar fora
+document.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+        navLinks.classList.remove('active');
+    }
 });

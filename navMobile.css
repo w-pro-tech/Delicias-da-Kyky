@@ -1,0 +1,54 @@
+/* Navbar */
+.navbar {
+    background-image: linear-gradient(to right, #EE7674, #f277b0); 
+    padding: 20px 0;
+    position: relative; /* Isso vai garantir que o z-index funcione */
+    z-index: 10; /* Adiciona um z-index para a navbar */
+}
+
+/* Menu Hambúrguer */
+.navbar .menu-toggle {
+    display: block;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 20; /* Aumenta o z-index para garantir que o botão fique acima de outros elementos */
+}
+
+/* Links de navegação */
+.navbar .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    background-color: #EE7674;
+    position: absolute;
+    top: 60px; /* Ajuste conforme necessário */
+    left: 0;
+    padding: 20px 0;
+    z-index: 15; /* Ajuste o z-index para garantir que o menu fique acima do overlay */
+    box-sizing: border-box;
+}
+
+/* Quando o menu está ativo */
+.navbar .nav-links.active {
+    display: flex;
+    height: auto;
+}
+
+/* Overlay no hero */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5; /* Certifique-se de que o overlay tenha um z-index menor que o menu */
+}
+
+/* Ajuste o top da navegação quando o menu estiver ativo */
+.navbar .nav-links.active {
+    top: 70px; /* Ajuste para a posição correta, talvez mais para baixo */
+}
