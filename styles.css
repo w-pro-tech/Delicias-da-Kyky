@@ -106,27 +106,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .btn {
     color: #591902 !important;
 }
@@ -422,13 +401,13 @@ footer .footer-bottom {
     font-size: 2em;
 }
 
+/* Estilos para o carrossel */
 .carousel {
     display: flex;
     overflow: hidden;
     position: relative;
-    width: 80%; /* Ajusta a largura do carrossel */
-    max-width: 1200px; /* Limita a largura máxima */
-    margin: 0 auto;
+    width: 610px; /* Largura fixa de 610px */
+    margin: 0 auto; /* Centraliza o carrossel */
 }
 
 .carousel-images {
@@ -437,9 +416,10 @@ footer .footer-bottom {
 }
 
 .carousel-images img {
-    width: 100%; /* Ajusta a largura das imagens para se adaptar ao carrossel */
-    height: 380px;
-    flex-shrink: 0;
+    width: 100%; /* As imagens ocupam 100% da largura do carrossel */
+    height: 300px; /* Ajuste de altura para um tamanho adequado */
+    object-fit: cover; /* Garante que as imagens cubram o espaço sem distorcer */
+    flex-shrink: 0; /* Impede que as imagens diminuam */
 }
 
 .carousel-button {
