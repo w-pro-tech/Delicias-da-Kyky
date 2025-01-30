@@ -1,0 +1,28 @@
+/* Garantir que o fundo original não seja alterado */
+.services-section, .video-section, .gallery-section {
+    position: relative;
+    padding: 50px 0; /* Mantém o padding existente */
+    overflow: hidden; /* Garante que os pontos não ultrapassem os limites da seção */
+}
+
+/* Garantir que o texto permaneça visível */
+.services-section h2, 
+.video-section h2, 
+.gallery-section h2 {
+    color: rgb(41, 14, 14);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra no texto */
+}
+
+/* Adiciona os pontos de granulado (chocolate) */
+.granulado {
+    position: relative;
+}
+
+.granulado .granulo {
+    position: absolute;
+    width: 8px; /* Tamanho do ponto de granulado */
+    height: 8px; /* Tamanho do ponto de granulado */
+    background-color: #6d4c41; /* Cor do chocolate */
+    border-radius: 50%; /* Forma arredondada */
+    z-index: -1; /* Coloca atrás do conteúdo */
+}

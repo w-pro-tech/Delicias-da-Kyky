@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delícias da Kyky</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="granulados.css">
     <head>
         <!-- Link do Font Awesome CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -23,8 +24,9 @@
             <div class="links">
                 <ul class="nav-links">
                     <li><a href="#services">O que fazemos</a></li>
+                    <li><a href="#video-section">Nossa História</a></li>
                     <li><a href="#gallery">Galeria</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#">Contato</a></li>
                     <li><a href="https://www.instagram.com/direct/t/17846565615351277" class="btn" target="_blank">Fazer Pedido</a></li>
                 </ul>
             </div>
@@ -36,13 +38,13 @@
         <div class="hero-overlay">
         <div class="hero-text">
             <h1>Bem-vindo às Delícias da Kyky!</h1>
-            <p>Descubra nossos doces artesanais, feitos com carinho e os melhores ingredientes. Cada pedacinho é uma explosão de sabor, perfeito para adoçar seu dia com o verdadeiro sabor caseiro.</p>
+            <p>Feitos com amor, recheados de felicidade</p>
             <a href="https://www.instagram.com/direct/t/17846565615351277" class="btn">Fazer Pedido</a>
         </div>
         </div>
     </section>
 
-  <!-- Seção de O que fazemos -->
+<!-- Seção de O que fazemos -->
 <section id="services" class="services-section">
     <h2>O que fazemos</h2>
     <div class="container">
@@ -80,51 +82,56 @@
 <section id="video-section" class="video-section">
     <h2>Nossa História</h2>
     <div class="video-container">
-        <video controls>
-            <source src="/images/0124.mp4" type="video/mp4">
+        <video controls >
+            <source src="https://drive.google.com/file/d/13HrVi0n01hQg0qhMZaz3aFyV3yjhfJzx/view?usp=drive_link" type="video/mp4">
             Seu navegador não suporta vídeos.
         </video>
     </div>
 </section>
+  <!-- Galeria -->
+  <section id="gallery" class="gallery-section">
+    <h2>Galeria</h2>
+    <div class="carousel">
+        <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+        <div class="carousel-images">
+            <img src="images/docetop.jpeg" alt="Imagem 1">
+            <img src="images/oredoce2.jpeg" alt="Imagem 2">
+            <img src="images/pardoce.jpeg" alt="Imagem 3">
+            <img src="images/leitedoce.jpeg" alt="Imagem 4">
+            <img src="images/codex.jpeg" alt="Imagem 5">
+            <img src="images/nutelladoce.jpeg" alt="Imagem 6">
+        </div>
+        <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+    </div>
+</section>
 
-    <!-- Galeria -->
-    <section id="gallery" class="gallery-section">
-        <h2>Galeria</h2>
-        <div class="container">
-            <div class="gallery-grid">
-                <img src="images/docetop.jpeg" alt="Imagem 1">
-                <img src="images/oredoce2.jpeg" alt="Imagem 2">
-                <img src="images/pardoce.jpeg" alt="Imagem 3">
-                <img src="images/leitedoce.jpeg" alt="Imagem 4">
-                <img src="images/codex.jpeg" alt="Imagem 5">
-                <img src="images/nutelladoce.jpeg" alt="Imagem 5">
+    <footer>
+        <div class="footer-container">
+            <!-- Informações de Contato -->
+            <div class="contact-info">
+                <p>Email: <a href="mailto:deliciasdakyky88@gmail.com">deliciasdakyky88@gmail.com</a></p>
+                <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+            </div>
+            
+            <!-- Redes Sociais -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/delicias.da.kyky/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
             </div>
         </div>
-    </section>
-    
-    <!-- Footer -->
-<footer>
-    <div class="footer-container">
-        <!-- Informações de Contato -->
-        <div class="contact-info">
-            <h3>Contato</h3>
-            <p>Email: <a href="mailto:deliciasdakyky88@gmail.com">deliciasdakyky88@gmail.com</a></p>
-            <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
-            <p>Endereço: Rua Doce, 123, Bairro, Cidade - Estado</p>
-        </div>
         
-        <!-- Redes Sociais -->
-        <div class="social-links">
-            <a href="https://www.instagram.com/delicias.da.kyky/" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Delícias da Kyky</p>
         </div>
-    </div>
-</footer>
-
+    </footer>
+    
 <script src="scripts.js"></script>
+<script src="granulados.js"></script>
+<script src="carrosel.js"></script>
 </body>
 </html>
