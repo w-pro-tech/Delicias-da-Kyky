@@ -65,43 +65,47 @@ body {
 
 
 /* Exibe o botão do menu hambúrguer somente em telas pequenas */
+/* Estilo global */
 .navbar .menu-toggle {
-    display: none;
+    display: none; /* Esconde o menu hambúrguer por padrão */
 }
 
-@media (max-width: 768px) {
-    /* Dentro da media query */
+/* Exibe o menu de navegação tradicional em telas grandes */
 .navbar .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    background-color: #EE7674;
-    position: absolute;
-    top: 60px; /* Ajuste a distância conforme necessário */
-    left: 0;
-    padding: 20px 0;
-    z-index: 1; /* Para garantir que o menu fique sobre outros conteúdos */
-    box-sizing: border-box;
+    display: flex; /* Exibe os links de navegação */
+    justify-content: flex-end;
+    gap: 30px;
 }
 
-/* Quando o menu está ativo */
-.navbar .nav-links.active {
-    display: flex;
-    height: auto; /* Certificando-se que a altura do menu é ajustada conforme o conteúdo */
-}
-
-    .navbar .nav-links a {
-        font-size: 1.1em;
-        color: white;
+/* Estilo para telas pequenas */
+@media (max-width: 768px) {
+    /* Esconde os links de navegação em telas pequenas */
+    .navbar .nav-links {
+        display: none; /* Esconde o menu de navegação */
+        flex-direction: column;
+        align-items: center;
+        background-color: #EE7674;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        width: 100%;
+        z-index: 1;
     }
 
+    /* Exibe o menu hambúrguer apenas em telas pequenas */
     .navbar .menu-toggle {
-        display: block;
+        display: block; /* Exibe o botão do hambúrguer */
         color: white;
         font-size: 2em;
         cursor: pointer;
+        z-index: 20;
+    }
+
+    /* Quando o menu hambúrguer for clicado */
+    .navbar .nav-links.active {
+        display: flex; /* Exibe os links de navegação quando o menu for ativado */
+        height: auto;
     }
 }
 
@@ -450,5 +454,27 @@ footer .footer-bottom {
 
     .carousel-images img {
         height: 250px; /* Ajusta a altura das imagens */
+    }
+}
+
+
+/* Exibe o botão do menu hambúrguer somente em telas pequenas */
+.navbar .menu-toggle {
+    display: none; /* Inicialmente, oculta o menu hambúrguer */
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none; /* Oculta o menu na tela pequena */
+    }
+
+    /* Exibe o menu hambúrguer em telas pequenas */
+    .navbar .menu-toggle {
+        display: block;
+    }
+
+    /* Menu ativo */
+    .navbar .nav-links.active {
+        display: flex;
     }
 }

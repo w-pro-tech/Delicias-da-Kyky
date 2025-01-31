@@ -21,7 +21,8 @@
     width: 100%;
     flex-direction: column;
     gap: 15px;
-    align-items: center;
+    align-items: center ;
+    justify-content: center;
     background-color: #EE7674;
     position: absolute;
     top: 60px; /* Ajuste conforme necessário */
